@@ -8,6 +8,8 @@ import {
 import "./App.css";
 import LandingPage from "./components/LandingPage";
 import MoreDetailsPage from "./components/MoreDetails";
+import Careers from "./components/Careers";
+import PageNotFound from "./components/404";
 
 const App = () => {
   return <RouterProvider router={router}></RouterProvider>;
@@ -20,7 +22,8 @@ const Root = () => {
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/more-details" element={<MoreDetailsPage />}></Route>
-        <Route path="*" element={<></>}></Route>
+        <Route path="/careers" element={<Careers />}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </main>
   );

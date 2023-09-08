@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import NavBar from "./LandingComponents/TopPageComponents/NavBar";
+import Footer from "./LandingComponents/Footer";
+
 const MoreDetails = () => {
   const Content = useRef([
     {
@@ -30,36 +32,44 @@ const MoreDetails = () => {
     }
   };
 
+  //redirect to load top of page
+  // useEffect(() => {
+  //   console.log(window?.location);
+  //   if (window?.location?.search && !window?.location?.href?.endsWith("#top")) {
+  //     window?.location?.replace(
+  //       `${window?.location.pathname}${window?.location?.search}/#top`
+  //     );
+  //   }
+  // }, []);
+
   return (
     <main>
-      <div className="sticky top-0 bg-white">
+      <div className="sticky top-0 bg-white" id="top">
         <NavBar />
       </div>
 
-      <div className="bg-gradient-to-r">
-        <section>
-          <section className="flex justify-center">
-            <button
-              className="p-2  border-2 border-black"
-              onClick={() => {
-                Next();
-              }}
-            >
-              Next
-            </button>
-          </section>
-          <div className=" text-center font-bold">{currentContent.title}</div>
-          <section className="w-full text-center mx-auto  ">
-            <i>
-              <q>let our SOFTware, do your HARD work</q>
-            </i>
-            <br />
-          </section>
-          <p className=" sm:w-[600px] text-center mx-auto p-10 shadow-md shadow-[rgb(0,0,60)]">
-            {currentContent.note}
-          </p>
-        </section>
+      <div className="bg-gradient-to-r text-center">
+        <div className="py-16">
+          <i>
+            <q>let our SOFTware, do your HARD work</q>
+          </i>
+        </div>
+        {Content?.current?.map((elements, index) => {
+          return (
+            <section key={index} className="pb-16">
+              <div className=" text-center font-bold">{elements.title}</div>
+              <section className="w-full text-center mx-auto  ">
+                <br />
+              </section>
+              <p className=" sm:w-[600px] text-center mx-auto p-10 shadow-md shadow-[rgb(0,0,60)]">
+                {elements.note}
+              </p>
+            </section>
+          );
+        })}
       </div>
+
+      <Footer />
     </main>
   );
 };
