@@ -1,12 +1,25 @@
-import logo from "../../../assets/logo.jpg";
-const Phone = () => {
+import logo from "../assets/logo.jpg";
+import { useRef, useEffect } from "react";
+const Phone = ({ showMenuBoolFromNavBar }) => {
+  const PhoneRef = useRef();
+
+  //animate phone onto screen
+  useEffect(() => {
+    setTimeout(() => {
+      PhoneRef.current.style.transform = "translateX(-20vw)";
+    }, 10);
+  }, []);
   return (
-    <main className="mx-auto  w-[220px] h-[400px] bg-white rounded-2xl overflow-hidden">
+    <main
+      className="mx-auto  w-[220px] h-[400px] bg-white rounded-2xl overflow-hidden relative left-[20vw] transition-transform duration-500"
+      ref={PhoneRef}
+    >
       <div className=" h-[97%] w-[95%] mx-auto relative top-[50%] translate-y-[-50%] rounded-2xl bg-[rgb(0,0,60)] ">
         <section className="relative mb-[-40px]  block  bg-gradient-to-l bg-[rgb(40,40,98)] h-20 rounded-t-2xl">
           <div className="inline-block text-white relative left-4">
             <img
               src={logo}
+              alt=""
               className="w-[25px] h-[25px] rounded-[50%] relative top-3 z-10"
             ></img>
           </div>

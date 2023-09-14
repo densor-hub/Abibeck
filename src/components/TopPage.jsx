@@ -1,13 +1,15 @@
-import { TwinklesAllSmall } from "./TopPageComponents/Twinkles";
-import NavBar from "./TopPageComponents/NavBar";
-import Phone from "./TopPageComponents/Phone";
-import SpaceShipDesign from "./TopPageComponents/SpaceShipDesign";
-import TwoBallsAtTop from "./TopPageComponents/TwoBallsAtTop";
-import InscriptionAtTop from "./TopPageComponents/InscriptionAtTop";
-import Twinkles from "./TopPageComponents/Twinkles";
-import Star from "./TopPageComponents/Star";
+import { TwinklesAllSmall } from "./Twinkles";
+import NavBar from "./NavBar";
+import Phone from "./Phone";
+import SpaceShipDesign from "./SpaceShipDesign";
+import TwoBallsAtTop from "./TwoBallsAtTop";
+import InscriptionAtTop from "./InscriptionAtTop";
+import Twinkles from "./Twinkles";
+import Star from "./Star";
+import { useRef } from "react";
 
 const PageTop = () => {
+  const showMenuBoolFromNavBar = useRef();
   return (
     <main className="relative overflow-hidden" id="home">
       <div className="bg-[rgb(0,0,60)]  w-screen h-fit overflow-x-hidden">
@@ -61,10 +63,10 @@ const PageTop = () => {
         </div>
         <div className="relative top-0 left-0 right-0 bg-transparent w-screen h-fit">
           <div>
-            <NavBar></NavBar>
+            <NavBar ref={showMenuBoolFromNavBar}></NavBar>
           </div>
           <div className="w-fit  relative mx-auto sm:mx-0 sm:left-[60%] md:left-[69%]  top-[150px] sm:top-10 2xl:left-[86%]">
-            <Phone></Phone>
+            <Phone showMenuBoolFromNavBar={showMenuBoolFromNavBar}></Phone>
           </div>
 
           <div className="w-fit  h-fit relative bottom-[410px]  sm:bottom-[250px] md:bottom-[300px] mx-auto md:mx-0 sm:left-[-120px] md:left-[100px] p-4 sm:p-10 text-white  md:border-2 border-slate-800 font-bold rounded-2xl bg-transparent text-center ">

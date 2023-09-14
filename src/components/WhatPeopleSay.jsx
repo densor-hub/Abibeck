@@ -1,12 +1,13 @@
-import image1 from "../../assets/bp-1.png";
-import image3 from "../../assets/bp-2.png";
-import image2 from "../../assets/bp-3.png";
+import image1 from "../assets/bp-1.png";
+import image3 from "../assets/bp-2.png";
+import image2 from "../assets/bp-3.png";
 import { AiFillStar } from "react-icons/ai";
 
 const WhatPeopleSay = () => {
   return (
     <main
-      className="overflow-x-hidden bg-white pb-[30px] flex justify-center items-center "
+      className="overflow-x-hidden bg-white pb-[30px] flex justify-center items-center z-10"
+      style={{ bottom: "1px" }}
       id="reviews"
     >
       <section className="block sm:flex w-fit mx-auto flex-col ">
@@ -18,6 +19,7 @@ const WhatPeopleSay = () => {
             <div className="flex flex-row">
               <img
                 src={image3}
+                alt=""
                 className="w-[50px] h-[50px] rounded-full mr-4"
               ></img>
               <div className="py-5">
@@ -42,6 +44,7 @@ const WhatPeopleSay = () => {
             <div className="flex">
               <img
                 src={image1}
+                alt=""
                 className="w-[50px] h-[50px] rounded-full mr-4"
               ></img>
               <div className="py-5">
@@ -66,6 +69,7 @@ const WhatPeopleSay = () => {
             <div className="flex">
               <img
                 src={image2}
+                alt=""
                 className="w-[50px] h-[50px] rounded-full mr-4"
               ></img>
               <div className="py-5">

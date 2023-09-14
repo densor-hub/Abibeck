@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Footer from "./LandingComponents/Footer";
+import Footer from "../components/Footer";
 
 const PageNotFound = () => {
   const navigateTo = useNavigate();

@@ -1,8 +1,11 @@
 import { useRef, useState } from "react";
-import NavBar from "./LandingComponents/TopPageComponents/NavBar";
-import Footer from "./LandingComponents/Footer";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import Services from "../components/Services";
+import OurExpertise from "../components/OurExpertise";
 
 const MoreDetails = () => {
+  var showButtons = false;
   const Content = useRef([
     {
       id: 1,
@@ -22,25 +25,6 @@ const MoreDetails = () => {
       note: " Our impact extends to the healthcare sector, where HealthCare Applications are redefining patient care and management. With a focus on technological advancements, We develop solutions that facilitate efficient patient record management, appointment scheduling, and medical billing. By leveraging data analytics and secure communication channels, healthcare providers can deliver timely and accurate care. Our HealthCare Applications adhere to industry standards, ensuring compliance and data security while enabling medical professionals to dedicate more time to patient care.",
     },
   ]);
-  const [currentContent, setCurrentContent] = useState(Content.current[0]);
-
-  const Next = () => {
-    if (currentContent.id === Content.current.length) {
-      setCurrentContent(Content.current[0]);
-    } else {
-      setCurrentContent(Content.current[currentContent.id + 1]);
-    }
-  };
-
-  //redirect to load top of page
-  // useEffect(() => {
-  //   console.log(window?.location);
-  //   if (window?.location?.search && !window?.location?.href?.endsWith("#top")) {
-  //     window?.location?.replace(
-  //       `${window?.location.pathname}${window?.location?.search}/#top`
-  //     );
-  //   }
-  // }, []);
 
   return (
     <main>
@@ -48,12 +32,16 @@ const MoreDetails = () => {
         <NavBar />
       </div>
 
-      <div className="bg-gradient-to-r text-center">
+      <Services showButtons={showButtons} />
+
+      <OurExpertise />
+      <div className="b text-center">
         <div className="py-16">
           <i>
             <q>let our SOFTware, do your HARD work</q>
           </i>
         </div>
+
         {Content?.current?.map((elements, index) => {
           return (
             <section key={index} className="pb-16">

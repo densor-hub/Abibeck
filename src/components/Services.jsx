@@ -3,9 +3,13 @@ import { ImMobile } from "react-icons/im";
 import { SlScreenDesktop } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
-const Services = () => {
+const Services = ({ showButtons }) => {
   return (
-    <main className="bg-white pb-4" id="services">
+    <main
+      className="bg-white pb-4 -z-10 relative"
+      style={{ bottom: "1px" }}
+      id="services"
+    >
       <div className="text-4xl py-10 font-semibold text-black w-fit mx-auto">
         Our Services
       </div>
@@ -22,12 +26,14 @@ const Services = () => {
             We create websites and web application solutions for all sort of
             organisations and industries.
           </div>
-          <Link
-            to={"/more-details"}
-            className="flex justify-around border-[1px] border-black rounded-lg text-center uppercase font-semibold w-fit py-2 px-4 mx-auto text-[11px] text-black hover:bg-[rgb(15,192,252)] hover:text-white"
-          >
-            More Details
-          </Link>
+          {/* {showButtons && (
+            <Link
+              to={"/services"}
+              className="flex justify-around border-[1px] border-black rounded-lg text-center uppercase font-semibold w-fit py-2 px-4 mx-auto text-[11px] text-black hover:bg-[rgb(15,192,252)] hover:text-white"
+            >
+              More Details
+            </Link>
+          )} */}
         </section>
 
         <section className="py-5 px-2">
@@ -42,12 +48,14 @@ const Services = () => {
             We are excellent at creating mobile app solutions for various
             purposes. We deliver magnificent andriod and iOS apps
           </div>
-          <Link
-            to={"/more-details"}
-            className="flex justify-around border-[1px] border-black rounded-lg text-center uppercase font-semibold w-fit py-2 px-4 mx-auto text-[11px] text-black hover:bg-[rgb(15,192,252)] hover:text-white"
-          >
-            More Details
-          </Link>
+          {/* {showButtons && (
+            <Link
+              to={"/services"}
+              className="flex justify-around border-[1px] border-black rounded-lg text-center uppercase font-semibold w-fit py-2 px-4 mx-auto text-[11px] text-black hover:bg-[rgb(15,192,252)] hover:text-white"
+            >
+              More Details
+            </Link>
+          )} */}
         </section>
 
         <section className="py-5 px-2">
@@ -61,12 +69,14 @@ const Services = () => {
           <div className="w-[200px] text-[13px] text-slate-500 text-center p-4">
             We create cross-platform desktop applications for all purposes
           </div>
-          <Link
-            to={"/more-details"}
-            className="flex justify-around border-[1px] border-black rounded-lg text-center uppercase font-semibold w-fit py-2 px-4 mx-auto text-[11px] text-black hover:bg-[rgb(15,192,252)] hover:text-white"
-          >
-            More Details
-          </Link>
+          {/* {showButtons && (
+            <Link
+              to={"/services"}
+              className="flex justify-around border-[1px] border-black rounded-lg text-center uppercase font-semibold w-fit py-2 px-4 mx-auto text-[11px] text-black hover:bg-[rgb(15,192,252)] hover:text-white"
+            >
+              More Details
+            </Link>
+          )} */}
         </section>
       </section>
     </main>

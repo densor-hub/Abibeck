@@ -1,6 +1,10 @@
 const AboutUs = () => {
   return (
-    <main className="text-white bg- bg-[rgb(0,0,60)] " id="about-us">
+    <main
+      className="text-white bg- bg-[rgb(0,0,60)] relative"
+      style={{ bottom: "3px" }}
+      id="about-us"
+    >
       <section className="text-white bg- bg-[rgb(0,0,0,0.3)] pb-[80px ]  flex flex-col ">
         <div className="pt-10 pb-5 text-center font-semibold text-3xl">
           About Us
