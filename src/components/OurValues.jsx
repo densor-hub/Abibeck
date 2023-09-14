@@ -29,7 +29,7 @@ const OurValues = () => {
   return (
     <main className="py-10">
       <article>
-        <header className="text-xl font-bold text-center">Our Expertise</header>
+        <header className="text-xl font-bold text-center">Our Values</header>
         <div>
           {OurValuesData?.map((elements, index) => {
             return (
