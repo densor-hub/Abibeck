@@ -30,10 +30,7 @@ const AboutUs = () => {
             ABIBECK is your compass in the realm of limitless software
             possibilities.
           </p>
-          <p>
-            Our values are Integrity, Speed, Standardization and
-            Results-focused.
-          </p>
+          <p>Our values are Integrity, Speed, Standardization and Quality.</p>
         </div>
       </section>
     </main>
