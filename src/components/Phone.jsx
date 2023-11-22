@@ -51,16 +51,18 @@ const Phone = ({ showMenuBoolFromNavBar }) => {
           </div>
         </section>
         <p className="text-center text-white relative bottom-6 text-xs z-50 font-bold animate-bounce">
-          <a href="#footer">Connect with us . . .</a>
+          <a href="#footer" className="hover:underline">Connect with us . . .</a>
         </p>
-        <section className="w-24 h-24 mx-auto  rounded-full my-4 bg-[rgb(15,192,252)] border-2 border-white shadow-lg shadow-[rgb(15,192,252)] animate-pulse">
-          <div className="h-8  w-8 rounded-full border-4 border-white mx-auto relative top-2 border-t-transparent">
-            <div className="w-1 h-4 bg-white mx-auto bottom-1 relative"></div>
-          </div>
-          <p className="text-xs mx-auto relative top-5 text-center text-white">
-            Connect !
-          </p>
-        </section>
+        <a href="#footer">
+          <section className="w-24 h-24 mx-auto  rounded-full my-4 bg-[rgb(15,192,252)] border-2 border-white shadow-lg shadow-[rgb(15,192,252)] animate-none hover:scale-[120%] hover:animate-spin">
+            <div className="h-8  w-8 rounded-full border-4 border-white mx-auto relative top-2 border-t-transparent">
+              <div className="w-1 h-4 bg-white mx-auto bottom-1 relative"></div>
+            </div>
+            <p className="text-xs mx-auto relative top-5 text-center text-white">
+              Connect !
+            </p>
+          </section>
+        </a>
 
         <section className="block text-xs space-x-4 w-fit mx-auto text-white mt-8">
           <div className="inline-block">
@@ -69,7 +71,7 @@ const Phone = ({ showMenuBoolFromNavBar }) => {
           </div>
           <div className="inline-block">
             <div>90.7 KB/s</div>
-            <p style={{ fontSize: "8px" }}>Upload</p>
+            <p style={{ fontSize: "8px" }}>Uploaded</p>
           </div>
         </section>
 

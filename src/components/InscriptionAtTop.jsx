@@ -13,6 +13,7 @@ const InscriptionAtTop = () => {
       </div>
 
       <div className="text-center md:text-left">
+        <div><i className="font-light text-sm relative bottom-[5px]" >Your future begins here</i></div>
         <a
           href="#services"
           className="py-1 px-2 bg-[rgb(15,192,252)] rounded-lg hover:bg-white hover:text-[rgb(0,0,65)]"
