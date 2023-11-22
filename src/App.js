@@ -6,13 +6,13 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
-import LandingPage from "./UIs/LandingPage";
-import MoreDetailsPage from "./UIs/ServicesPage";
-import Careers from "./UIs/Careers";
-import PageNotFound from "./UIs/404";
-import ServicesPage from "./UIs/ServicesPage";
-import AboutUsPage from "./UIs/AboutUsPage";
-import ContactUsPage from "./UIs/ContactUsPage";
+import LandingPage from "./Pages/LandingPage";
+import MoreDetailsPage from "./Pages/ServicesPage";
+import Careers from "./Pages/Careers";
+import PageNotFound from "./Pages/404";
+import ServicesPage from "./Pages/ServicesPage";
+import AboutUsPage from "./Pages/AboutUsPage";
+import ContactUsPage from "./Pages/ContactUsPage";
 
 const App = () => {
   return <RouterProvider router={router}></RouterProvider>;

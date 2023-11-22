@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 import { useRef, useEffect } from "react";
 const Phone = ({ showMenuBoolFromNavBar }) => {
@@ -51,9 +52,9 @@ const Phone = ({ showMenuBoolFromNavBar }) => {
           </div>
         </section>
         <p className="text-center text-white relative bottom-6 text-xs z-50 font-bold animate-bounce">
-          <a href="#footer" className="hover:underline">Connect with us . . .</a>
+          <Link to={"/contact"} className="hover:underline">Connect with us . . .</Link>
         </p>
-        <a href="#footer">
+        <Link to={"/contact"}>
           <section className="w-24 h-24 mx-auto  rounded-full my-4 bg-[rgb(15,192,252)] border-2 border-white shadow-lg shadow-[rgb(15,192,252)] animate-none hover:scale-[120%] hover:animate-spin">
             <div className="h-8  w-8 rounded-full border-4 border-white mx-auto relative top-2 border-t-transparent">
               <div className="w-1 h-4 bg-white mx-auto bottom-1 relative"></div>
@@ -62,7 +63,7 @@ const Phone = ({ showMenuBoolFromNavBar }) => {
               Connect !
             </p>
           </section>
-        </a>
+        </Link>
 
         <section className="block text-xs space-x-4 w-fit mx-auto text-white mt-8">
           <div className="inline-block">
