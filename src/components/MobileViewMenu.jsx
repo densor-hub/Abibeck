@@ -2,12 +2,19 @@ import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 const MobileViewMenu = ({ showMenu, setShowMenu }, ref) => {
   return (
-    <section ref={ref}>
+    <section
+      ref={ref}
+      className={
+        showMenu
+          ? "w-[100vw] h-[100vh] bg-[rgb(15,192,252)] relative right-16"
+          : "h-0 w-0 bg-transparent"
+      }
+    >
       {showMenu && (
         <div className="flex flex-col">
           <Link
             to={"/"}
-            className="bg-[rgb(15,192,252)] border-2 border-b-white"
+            className="border-2 border-b-white p-4"
             onClick={() => {
               setShowMenu(false);
             }}
@@ -16,7 +23,7 @@ const MobileViewMenu = ({ showMenu, setShowMenu }, ref) => {
           </Link>
           <Link
             to={"/services"}
-            className="bg-[rgb(15,192,252)] border-2 border-b-white"
+            className="border-2 border-b-white p-4"
             onClick={() => {
               setShowMenu(false);
             }}
@@ -26,7 +33,7 @@ const MobileViewMenu = ({ showMenu, setShowMenu }, ref) => {
 
           <Link
             to={"/about-us"}
-            className="bg-[rgb(15,192,252)]  border-2 border-b-white"
+            className="border-2 border-b-white p-4"
             onClick={() => {
               setShowMenu(false);
             }}
@@ -34,7 +41,7 @@ const MobileViewMenu = ({ showMenu, setShowMenu }, ref) => {
             About Us
           </Link>
           <div
-            className="bg-[rgb(15,192,252)]  border-2 border-b-white"
+            className="border-2 border-b-white p-4"
             onClick={() => {
               setShowMenu(false);
             }}
@@ -44,7 +51,7 @@ const MobileViewMenu = ({ showMenu, setShowMenu }, ref) => {
             </Link>
           </div>
           <div
-            className="bg-[rgb(15,192,252)]  border-2 border-b-white"
+            className="border-2 border-b-white p-4"
             onClick={() => {
               setShowMenu(false);
             }}

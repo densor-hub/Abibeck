@@ -32,6 +32,7 @@ const NavBar = forwardRef((prop, ref) => {
       document?.removeEventListener("click", clicked);
     };
   });
+
   return (
     <nav
       className="flex flex-row justify-between items-center h-[50px] md:h-[78px] text-white bg-transparent relative z-20"
